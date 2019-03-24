@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Text-Utils.com</title>
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+                <a class="navbar-brand" href="#">Welcome To Text Utils</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                
+              </nav>
+    <div class='container'>
+            <form action='/results/' method='POST'>
+                {%csrf_token%}
+                     <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Enter the Text</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name='textarea' rows="3"></textarea>
+                    </div>
+                    <div class="custom-control custom-switch">
+                            <input type="checkbox" name='removepuncs' class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1">Remove The Puncs</label>
+                          </div>
+                    <div class="custom-control custom-switch">
+                                <input type="checkbox" name='fullcaps' class="custom-control-input" id="customSwitch2">
+                                <label class="custom-control-label" for="customSwitch2">Capitalize Text</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                                    <input type="checkbox" name='nlremove' class="custom-control-input" id="customSwitch3">
+                                    <label class="custom-control-label" for="customSwitch3">New Line Remover</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                            <input type="checkbox" name='espaceremove' class="custom-control-input" id="customSwitch4">
+                            <label class="custom-control-label" for="customSwitch4">Extra Space Remover</label>
+                    </div>
+                    <!-- <div class="custom-control custom-switch">
+                            <input type="checkbox" name='charcount' class="custom-control-input" id="customSwitch5">
+                            <label class="custom-control-label" for="customSwitch5"> Count Char</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-success mt-2">Submit The Text</button>
+                  </form>
+
+    </div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
